@@ -16,5 +16,10 @@ namespace FluentValidationApp.Web.Models
         public DateTime? Birthday { get; set; }
         public IList<Address> Addresses { get; set; }
         public Gender Gender { get; set; }
+
+        public string GetFullName ()
+        {
+            return $"{Name}-{Email}-{Age}";
+        }
     }
 }
