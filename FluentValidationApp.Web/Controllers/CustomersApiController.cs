@@ -31,7 +31,7 @@ namespace FluentValidationApp.Web.Controllers
         [HttpGet]
         public IActionResult MappingExam()
         {
-            Customer customer = new Customer { Id = 1, Name = "Ugur", Email = "ucyoglu@outlook.com", Age = 28 };
+            Customer customer = new Customer { Id = 1, Name = "Ugur", Email = "ucyoglu@outlook.com", Age = 28,CreditCard=new CreditCard { Number="1234",ValidDate=DateTime.Now} };
             return Ok(_mapper.Map<CustomerDto>(customer));
         }
 
